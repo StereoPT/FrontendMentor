@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  background-color: #fafafa;
+  color: #4c4e61;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main {
+  margin: 0 auto;
+  padding: 5em 2em 3em 2em;
+}
+
+header {
+  text-align: center;
+}
+
+header .sub-title {
+  margin-top: 0.38em;
+  font-weight: 200;
+  font-size: 24px;
+}
+
+header h2 {
+  margin: 0.1em 0;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+header p {
+  margin-top: 1em;
+  font-weight: 400;
+  color: #a3a5ae;
+  line-height: 1.6em;
+}
+
+section {
+  margin-top: 5em;
+}
+
+section article {
+  background-color: white;
+  margin-bottom: 2em;
+  padding: 2em 2em 1em 2em;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 10px 15px 0 rgba(76, 78, 97, 0.1);
+          box-shadow: 0 10px 15px 0 rgba(76, 78, 97, 0.1);
+  border-top: 3.5px solid;
+}
+
+section article h2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+section article small {
+  color: #a3a5ae;
+}
+
+section article .img-right {
+  text-align: right;
+  margin-top: 2.45em;
+}
+
+section article .img-right img {
+  width: 58px;
+}
+
+section .cyan-border {
+  border-color: #45d3d3;
+}
+
+section .red-border {
+  border-color: #ea5353;
+}
+
+section .orange-border {
+  border-color: #fcaf4a;
+}
+
+section .blue-border {
+  border-color: #ea5353;
+}
+/*# sourceMappingURL=styles.css.map */
