@@ -17,135 +17,114 @@ $iBlue: hsl(212, 86%, 64%);
 
 body {
     font-family: "Poppins", sans-serif;
-    font-size: 15px;
-
     background-color: $LightGray;
-    color: $DarkBlue;
-
-    margin: 0;
-    display: flex;
-    justify-items: center;
 }
 
-.main {
-    margin: 0 auto;
-    padding: 5em 2em 3em 2em;
+p {
+    color: $GrayishBlue;
 }
 
 header {
-    margin: auto;
+    margin: 50px auto;
+    max-width: 500px;
     text-align: center;
+    color: $DarkBlue;
 
-    .sub-title {
-        margin-top: 0.38em;
+    h1 {
         font-weight: 200;
-        font-size: 24px;        
+        font-size: 32px;
+        margin: 0;
     }
-
-    h2 {
-        margin: 0.1em 0;
+    
+    h1 span {
         font-weight: 600;
-        font-size: 24px;
+        margin: 0;
     }
 
     p {
         margin-top: 1em;
         font-weight: 400;
-        color: $GrayishBlue;
         line-height: 1.6em;
     }
 }
 
-section {
-    margin-top: 5em;
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1140px;
 
-    article {
+    .card {
         background-color: $White;
-
-        margin-bottom: 2em;
-        padding: 2em 2em 1em 2em;
-
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
-        box-shadow: 0 10px 15px 0 rgba($DarkBlue, 0.1);
-
-        border-top: 3.5px solid;
-
-        h2 {
-            margin: 0;
-            margin-bottom: 0.5em;
-            font-weight: 600;
-            font-size: 20px;
-        }
-
-        small {
-            color: $GrayishBlue;
-        }
-
-        .img-right {
-            text-align: right;
-            margin-top: 2.45em;
-
-            img {
-                width: 58px;
-            }
-        }
-    }
-
-    .cyan-border {
-        border-color: $iCyan;
-    }
-
-    .red-border {
-        border-color: $iRed;
-    }
-
-    .orange-border {
-        border-color: $iOrange;
-    }
-
-    .blue-border {
-        border-color: $iBlue;
-    }
-}
-
-@media (min-width: 540px) {
-    header {
-        max-width: 540px;
-
-        .sub-title {
-            margin-top: 0.1em;
-            font-size: 36px;        
-        }
+        padding: 30px;
+        position: relative;
+        overflow: hidden;
+        margin: 15px;
+        width: 350px;
     
         h2 {
             margin: 0;
-            font-size: 36px;
+            color: $DarkBlue;
         }
+        
+        p {
+            font-size: 14px;
+            margin: 15px 0 40px;
+        }
+    
+        img {
+            display: block;
+            margin-left: auto;
+        }
+    }
+
+    .card::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 5px;
+        width: 100%;
+    }
+
+    .card-cyan::after {
+        background-color: $iCyan;
+    }
+    
+    .card-red::after {
+        background-color: $iRed;
+    }
+    
+    .card-orange::after {
+        background-color: $iOrange;
+    }
+    
+    .card-blue::after {
+        background-color: $iBlue;
+    }
+    
+    .card-push {
+        transform: translateY(50%);
     }
 }
 
-@media (min-width: 1200px) {
-    section {
-        max-width: 1120px;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        margin: 4.5em auto;
+footer {
+    text-align: center;
+}
 
-        article {
-            max-width: 345px;
-            max-height: 300px;
-            min-width: 345px;
+@media (max-width: 775px) {
+    header {
+        h1 {
+            font-size: 24px;
         }
+    }
 
-        .lg-stack {
-            margin: 0 2em 0 2em;
-
-            article {
-                max-width: 345px;
-                max-height: 300px;
-            }
+    .container {
+        .card-push {
+            transform: translateY(0);
         }
     }
 }
