@@ -24,6 +24,7 @@ body {
 
     margin: 0;
     display: flex;
+    justify-items: center;
 }
 
 .main {
@@ -32,6 +33,7 @@ body {
 }
 
 header {
+    margin: auto;
     text-align: center;
 
     .sub-title {
@@ -70,6 +72,7 @@ section {
 
         h2 {
             margin: 0;
+            margin-bottom: 0.5em;
             font-weight: 600;
             font-size: 20px;
         }
@@ -101,6 +104,48 @@ section {
     }
 
     .blue-border {
-        border-color: $iRed;
+        border-color: $iBlue;
+    }
+}
+
+@media (min-width: 540px) {
+    header {
+        max-width: 540px;
+
+        .sub-title {
+            margin-top: 0.1em;
+            font-size: 36px;        
+        }
+    
+        h2 {
+            margin: 0;
+            font-size: 36px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    section {
+        max-width: 1120px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin: 4.5em auto;
+
+        article {
+            max-width: 345px;
+            max-height: 300px;
+            min-width: 345px;
+        }
+
+        .lg-stack {
+            margin: 0 2em 0 2em;
+
+            article {
+                max-width: 345px;
+                max-height: 300px;
+            }
+        }
     }
 }
